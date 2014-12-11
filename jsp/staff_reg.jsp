@@ -1,0 +1,56 @@
+<%@page import="java.sql.*"%>
+<%@page import="java.io.*"%>
+<html>
+<body>
+<%
+String fname,mname,lname,mail,department,loginid,password1;
+long contact;
+
+fname=request.getParameter("fname");
+mname=request.getParameter("mname");
+lname=request.getParameter("lname");
+mail=request.getParameter("mail");
+department=request.getParameter("department");
+contact=Long.parseLong(request.getParameter("contact"));
+loginid=request.getParameter("loginid");
+password1=request.getParameter("password");
+
+Connection con=null;
+Statement st=null;
+ 
+    String url = "jdbc:mysql://localhost:3306/";
+    String dbName = "project";
+    String driver = "com.mysql.jdbc.Driver";
+    String userName = "root"; 
+    String password = "29pankaj";
+try
+{
+Class.forName(driver);
+con=DriverManager.getConnection(url+dbName,userName,password);
+st=con.createStatement();
+String qr="insert into staff_reg values('"+fname+"','"+mname+"','"+lname+"','"+department+"','"+mail+"',"+contact+",'"+loginid+"','"+password1+"')";
+int n=st.executeUpdate(qr);
+if(n>0)
+%>
+<h3>Your details are saved!</h3>
+<p><a href="http://localhost:8080/project/html/staff_login.html"<h3>Please Login</h3>
+<%
+st.close();
+con.close();
+}
+catch(ClassNotFoundException e)
+{
+%>
+<h3>Class not found exception</h3>
+<%
+}
+catch(SQLException c)
+{
+%>
+<h3>SQL exception occured</h3>
+<%
+int cd=c.getErrorCode();
+out.println(cd);
+}%>
+</body>
+</html>

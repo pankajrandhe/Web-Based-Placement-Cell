@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script language="javascript">
+
+function validateMail()
+{
+var x=document.reg.mail.value;
+var atpos=x.indexOf("@");
+var dotpos=x.lastIndexOf(".");
+if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
+  {
+  alert("Not a valid e-mail address");
+  return false;
+  }
+ else
+	return true;
+ }
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>student Registration</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600" rel="stylesheet" type="text/css" />
+<link href="../css/default.css" rel="stylesheet" type="text/css" media="all" />
+<!--[if IE 6]>
+<link href="default_ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+</head>
+
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="logo">
+			<a href="http://www.gcoea.ac.in"><img src="../images/logo.jpg"></a>
+			<h1><a href="#">Training and Placements</a></h1>
+			<p>Government College of Engineering, Amravati</p>
+		</div>
+	</div>
+	<!-- end #header -->
+	<div id="menu">
+		<ul>
+			<li class="current_page_item"><a href="index.html"">Home</a></li>
+			<li><a href="#">Why to Recruit</a></li>
+			<li><a href="#">Guidance</a></li>
+			<li><a href="#">Academics</a></li>
+			<li><a href="#">Principals Desk</a></li>
+			<li><a href="#">FAQs</a></li>
+			<li class="last"><a href="#">Contact Us</a></li>
+		</ul>
+	</div>
+	
+	<div id="three-columns">
+		<div class="content">
+			<center><h1>Staff Registration</h1></center>
+			<form name="reg" method="post" action="http://localhost:8080/project/jsp/staff_reg.jsp" onsubmit="return validateMail();">
+			<table>
+			<tr>
+			<th align="left">First Name:</th>
+			<th><input type="text" name="fname"></th>
+			</tr>
+			<th align="left">Middle Name:</th>
+			<th><input type="text" name="mname"></th>
+			</tr>
+			<tr>
+			<th align="left">Last Name:</th>
+			<th><input type="text" name="lname"></th>
+			</tr>
+			<tr>
+			<th align="left">Department:</th>
+			<td><select name="department">
+				<option value="it">IT</option>
+				<option value="instru">INSTRUMRNTATION</option>
+				<option value="mechanical">MECHANICAL</option>
+				<option value="civil">CIVIL</option>
+				<option value="electrical">ELECTRICAL</option>
+				<option value="electonics">ELECTRONICS</option>
+				<option value="computer">COMPUTER SCIENCE</option>
+				</SELECT>
+			</td>
+			</tr>
+			<tr>
+			<th align="left">Email ID:</th>
+			<th><input type="text" name="mail"></th>
+			</tr>
+			<tr>
+			<th align="left">Contact</th>
+			<th><input type="text" name="contact"></th>
+			</tr>
+			
+			<tr><td colspan="2">Please enter appropriate loginid and password</td></tr>
+			<th align="left">Login ID:</th>
+			<th><input type="text" name="loginid"></th>
+			</tr>
+			<tr>
+			<th align="left">Password:</th>
+			<th><input type="password" name="password"></th>
+			</tr>
+		<!--<tr>
+		<th align="left">Re-enter Password:</th>
+		<th><input type="password" name="password2"></th>
+		</tr>-->
+		<tr>
+		<td colspan="2"><center><input type="submit" value="submit"></center></td>
+		</tr>
+		</table>
+		</form>
+			
+		
+	</div>
+	</div>
+	<div id="footer">
+	<br><br>
+	<center>&copy;All Rights Reserved. Project by Abhilash, Abhinay & Pankaj.</center>
+	</div>
+		
+</div>
+</body>
+</html>

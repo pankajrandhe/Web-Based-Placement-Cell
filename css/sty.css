@@ -1,0 +1,80 @@
+
+#navigation {
+  border-bottom: solid 1px #AAA;
+  padding: 0;
+}
+
+#navigation li {
+  display: inline-block;
+}
+
+#navigation li a,
+#navigation li a:visited {
+  display: block;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  color: #333;
+}
+
+#navigation li a:hover,
+#navigation li a:active{
+  background: #444;
+  color: #FFF;
+}
+.header
+{
+border:0;
+height:18%;
+color:#ffffff;
+text-shadow: 1px 1px 1px #000, 3px 3px 5px blue;
+background-image:url('../images/plce1.jpg');
+}
+.tab
+{
+background-image:url('../images/back1.jpg');
+background-color: #a1a1a1;;
+height:5%;
+}
+.main
+{
+background-image:url('../images/back1.jpg');
+height:70%;
+color:#aaaccc;
+-webkit-box-shadow: 0px 0px 4px #666;
+}
+.footer
+{
+padding:5px;
+background-image:url('../images/footer1.jpg');
+height:10%;
+color:#000000;
+}
+.po
+{
+position:absolute;
+}
+img
+{
+border:0;
+opacity:0.7;
+filter:alpha(opacity=40);
+position:absolute;
+top:18px;
+}
+h1
+{
+position:absolute;
+left:150px;
+top:10px;
+}
+h3
+{
+position:absolute;
+left:150px;
+top:50px;
+}
+
+{
+opacity:0.5;
+}

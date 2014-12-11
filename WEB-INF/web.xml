@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app version="3.0"
+  xmlns="http://java.sun.com/xml/ns/javaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+ 
+   <!-- To save as "hello\WEB-INF\web.xml" -->
+ 
+   <servlet>
+      <servlet-name>HelloWorld</servlet-name>
+      <servlet-class>HelloServlet</servlet-class>
+	</servlet>
+	<servlet>
+      <servlet-name>sample</servlet-name>
+      <servlet-class>Sample</servlet-class>
+   </servlet>
+ <servlet>
+      <servlet-name>UserQuery</servlet-name>
+      <servlet-class>QueryServlet</servlet-class>
+   </servlet>
+ <servlet>
+      <servlet-name>Register</servlet-name>
+      <servlet-class>Register</servlet-class>
+   </servlet>
+    <servlet>
+      <servlet-name>Akshay</servlet-name>
+      <servlet-class>Akshay</servlet-class>
+   </servlet>
+	<servlet>
+      <servlet-name>BulletinBoard</servlet-name>
+      <servlet-class>BulletinBoard</servlet-class>
+   </servlet>
+ 
+   <!-- Note: All <servlet> elements MUST be grouped together and
+         placed IN FRONT of the <servlet-mapping> elements -->
+ 
+   <servlet-mapping>
+      <servlet-name>HelloWorld</servlet-name>
+      <url-pattern>/sayhello</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+      <servlet-name>sample</servlet-name>
+      <url-pattern>/sample</url-pattern>
+   </servlet-mapping>
+ <servlet-mapping>
+      <servlet-name>UserQuery</servlet-name>
+      <url-pattern>/query</url-pattern>
+   </servlet-mapping>
+
+   <servlet-mapping>
+      <servlet-name>Register</servlet-name>
+      <url-pattern>/Register</url-pattern>
+</servlet-mapping>
+
+   <servlet-mapping>
+      <servlet-name>Akshay</servlet-name>
+      <url-pattern>/akshay</url-pattern>
+   </servlet-mapping>
+   <servlet-mapping>
+      <servlet-name>BulletinBoard</servlet-name>
+      <url-pattern>/bulletin</url-pattern>
+   </servlet-mapping>
+
+....
+<context-param> 
+    <description>Location to store uploaded file</description> 
+    <param-name>file-upload</param-name> 
+    <param-value>
+         E:\project\tomcat\webapps\project\resumes\
+     </param-value> 
+</context-param>
+....
+</web-app>
+
+ 
